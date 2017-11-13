@@ -1,0 +1,30 @@
+@import '../styles/variables.css';
+
+/*----------------- 
+  PAGE 
+ -----------------*/
+.Page {
+  background: var(--green);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  @media (--tablet-portrait) {
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  @media (--tablet-landscape) {
+    margin-left: 20%;
+    width: 60%;
+  }
+
+  @media (--desktop) {
+    margin-left: 30%;
+    width: 40%;
+  }
+}

@@ -1,0 +1,54 @@
+@import '../styles/variables.css';
+
+/*---------------- 
+  LIST 
+ -----------------*/
+.list {
+  background: var(--offwhite);
+  color: var(--grey);
+  flex: 1 1 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.list__table {
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.list__table__head {
+  background: var(--green);
+  color: var(--teal);
+  font-family: var(--font-heading);
+}
+
+.list__table__body {
+  overflow-y: auto;
+}
+
+.list__table__row {
+  border-bottom: 1px solid var(--grey-lightest);
+  display: flex;
+  flex: 1 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.list__table__title,
+.list__table__cell {
+  flex: 1 0;
+  padding: 0.5vr 1em;
+  text-align: center;
+
+  &:first-child {
+    flex: 2 0;
+    text-align: left;
+  }
+}

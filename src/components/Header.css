@@ -1,0 +1,31 @@
+@import '../styles/variables.css';
+
+/*----------------- 
+  HEADER 
+ -----------------*/
+header {
+  background: var(--blue);
+  flex: 0 0 auto;
+  padding: 1vr calc(0.5vr + 1%) 0;
+  position: relative;
+
+  @media (--desktop) {
+    padding: 3vr 0 0;
+  }
+}
+
+.header__content {
+  width: 90%;
+
+  @media (--tablet-portrait) {
+    width: 70%;
+  }
+}
+
+.header__subtitle {
+  width: 80%;
+
+  @media (--tablet-portrait) {
+    width: 100%;
+  }
+}

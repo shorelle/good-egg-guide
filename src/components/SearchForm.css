@@ -1,0 +1,47 @@
+@import '../styles/variables.css';
+
+/*----------------- 
+  SEARCH FORM 
+ -----------------*/
+form {
+  padding-bottom: 1vr;
+  text-align: center;
+  width: 100%;
+
+  & input {
+    appearance: none;
+    border: 0;
+    border-top-left-radius: calc(1em * var(--base-line-height));
+    border-bottom-left-radius: calc(1em * var(--base-line-height));
+    color: var(--grey);
+    font: inherit;
+    padding: 0.5vr calc(1em * var(--base-line-height));
+    position: relative;
+    width: 60%;
+    z-index: 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 5px 5px 0 var(--blue-active);
+    }
+  }
+
+  & button.primary {
+    background: var(--yellow);
+    border-radius: calc(1em * var(--base-line-height));
+    color: var(--brown);
+    font-weight: bold;
+    left: calc(-1em * var(--base-line-height));
+    margin: 0 calc(-1em * var(--base-line-height)) 0 0;
+    padding: 0.5vr calc(1em * var(--base-line-height));
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active {
+      background: var(--yellow-active);
+      color: var(--brown-active);
+    }
+  }
+}

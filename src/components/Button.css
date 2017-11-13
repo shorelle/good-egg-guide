@@ -1,0 +1,68 @@
+@import '../styles/variables.css';
+
+/*----------------- 
+  BUTTON
+ -----------------*/
+button.location {
+  background: var(--green-dark);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  margin: 0 1% 2%;
+  padding: 0.5vr 0;
+  position: relative;
+  width: 18%;
+
+  &:after {
+    background: var(--green-active);
+    border-radius: var(--border-radius);
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: height 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  &:hover,
+  &:active {
+    &:after {
+      height: 5px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.active {
+    animation: bgActive 0.2s ease-in-out forwards;
+  }
+
+  &.inactive {
+    animation: bgInactive 0.2s ease-in-out forwards;
+  }
+
+  &.Australia {
+    width: 38%;
+  }
+}
+
+@keyframes bgInactive {
+  from {
+    background: var(--green-active);
+  }
+  to {
+    background: var(--green-dark);
+  }
+}
+
+@keyframes bgActive {
+  from {
+    background: var(--green-dark);
+  }
+  to {
+    background: var(--green-active);
+  }
+}

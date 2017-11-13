@@ -1,0 +1,18 @@
+@import '../styles/variables.css';
+
+/*----------------- 
+  FOOTER 
+ -----------------*/
+footer {
+  background: var(--green);
+  flex: 0 0 auto;
+  padding: 0 0.5vr 1%;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__title {
+  color: var(--teal);
+  padding-left: 1%;
+  text-align: left;
+}

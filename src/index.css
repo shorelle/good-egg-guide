@@ -1,5 +1,123 @@
+/*---------------- 
+  GLOBAL STYLES 
+ -----------------*/
+@import './styles/variables.css';
+
+
+/*---------------- 
+  GENERAL 
+ -----------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-font-size);
+  height: 100%;
+  line-height: var(--base-line-height);
+}
+
 body {
+  background: var(--blue);
+  color: var(--white);
+  font: 14px/1.4 var(--font-body);
+  height: 100%;
   margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
   padding: 0;
-  font-family: sans-serif;
+  text-align: center;
+
+  @media (--tablet-portrait) { 
+    font: 16px/1.4 var(--font-body);
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  color: var(--white);
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  
+  &:after,
+  &:before {
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 0;
+  }
+
+  &:after {
+    background: var(--green);
+    transition: width 0.2s ease-in-out;
+    right: 0;
+  }
+
+  &:before {
+    left: 0;
+    transition: width 0 ease-in-out, background 0.2s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0 ease-in-out;
+  }
+
+  &:hover:before {
+    background: var(--green);
+    transition: width 0.2s ease-in-out;
+    width: 100%;
+  }
+}
+
+.divider {
+  @media (--desktop) {
+    display: block;
+  }
+}
+
+/*---------------- 
+  HEADINGS 
+ -----------------*/
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: calc(1rem * var(--base-ratio) * 1.2);
+  line-height: 1.5vr;
+  
+  @media (--tablet-portrait) { 
+    font-size: calc(1rem * var(--base-ratio) * 2);
+    line-height: 2vr;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 2vr;
+}
+
+
+/*---------------- 
+  BUTTONS 
+ -----------------*/
+button {
+  appearance: none;
+  border: 0;
+  font: inherit;
+  transition: all 0.1s ease-in-out;
 }
